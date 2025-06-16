@@ -109,11 +109,10 @@ const AboutPage = () => {
         >
           <Users className="w-12 h-12 text-orange-500 mx-auto" />
           <h2 className="text-4xl font-bold text-orange-600">
-            The Brains Behind BroFessor
+            The Brain Behind BroFessor
           </h2>
           <p className="text-gray-700 max-w-2xl mx-auto mt-4">
-            We're a small but mighty team blending tech, AI, and education to
-            rethink how people learn in Africa — and the world.
+            It's Literally just me.
           </p>
 
           <div className="flex flex-col gap-16 pt-12 max-w-4xl mx-auto">
@@ -130,53 +129,22 @@ const AboutPage = () => {
               </div>
               <div>
                 <h4 className="text-lg font-bold">Nilton Novele</h4>
-                <p className="text-sm text-gray-600 mb-2">Founder & Engineer</p>
+                <p className="text-sm text-gray-600 mb-2">
+                  Founder & Developer
+                </p>
                 <p className="text-gray-700 mb-4 max-w-md">
                   As a procrastinator, I was looking for quickest and most
                   effective way to study for an exam. I didn't find on the
                   internet so I decided to create one, and then I decided to not
                   be a gatekeeper, BroFessor is here now.
                 </p>
-                <blockquote className="bg-orange-50 border-l-4 border-orange-400 p-4 italic text-orange-700 shadow-sm rounded mb-4 max-w-md">
+                {/* <blockquote className="bg-orange-50 border-l-4 border-orange-400 p-4 italic text-orange-700 shadow-sm rounded mb-4 max-w-md">
                   “I will always choose a lazy person to do a difficult job
                   because a lazy person will find an easy way to do it” - Steve
                   Jobs
-                </blockquote>
+                </blockquote> */}
                 <a
                   href="https://www.linkedin.com/in/nilton-novele-82211821b/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block px-4 py-2 bg-orange-500 text-white rounded hover:bg-orange-600 transition"
-                >
-                  LinkedIn
-                </a>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-6 text-left">
-              <div className="w-32 h-32 rounded-full overflow-hidden shadow-lg flex-shrink-0">
-                <Image
-                  src="/jumpex.jpg"
-                  alt="Henzel Tibana"
-                  width={128}
-                  height={128}
-                  className="object-cover w-full h-full"
-                />
-              </div>
-              <div>
-                <h4 className="text-lg font-bold">Henzel Tibana</h4>
-                <p className="text-sm text-gray-600 mb-2">Co-Founder</p>
-                <p className="text-gray-700 mb-4 max-w-md">
-                  Nilton always comes up with wild ideas, and as his friend, I
-                  have always supported him. But honestly? This one is different
-                  — this app is actually helpful, guys.
-                </p>
-                <blockquote className="bg-orange-50 border-l-4 border-orange-400 p-4 italic text-orange-700 shadow-sm rounded mb-4 max-w-md">
-                  “At first I thought it was just another one of the Nilton
-                  ideas — but this one really works.”
-                </blockquote>
-                <a
-                  href="https://www.linkedin.com/in/henzel-tibana-a07068211/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block px-4 py-2 bg-orange-500 text-white rounded hover:bg-orange-600 transition"
@@ -230,12 +198,16 @@ const AboutPage = () => {
           {/* Responsive YouTube Embed */}
           <div className="mt-12 aspect-w-16 aspect-h-9 max-w-4xl mx-auto">
             <iframe
-              src="https://www.youtube.com/embed/emKs-OMoT7w?si=RNJWfaF2gi9z_8bW"
+              src="https://www.youtube.com/embed/6LPQu21pQlQ?si=sXKpLdiFJTjWDHar"
               title="How BroFessor Works Video"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
               className="w-full h-120 rounded-lg shadow-lg"
             />
+            <p className="text-gray-700 mb-4 max-w-md pt-8 mx-auto text-center">
+              I'm still trying to make a tutorial video (harder than what I
+              expected). But in the meantime, you can enjoy this waiting video.
+            </p>
           </div>
         </motion.div>
       </section>
