@@ -33,7 +33,7 @@ export const Hero = () => {
           </p>
           <div className="flex justify-center md:justify-start">
             <Link
-              href="#"
+              href="/sign-in"
               className="inline-flex items-center gap-2 bg-orange-600 text-white px-6 py-3 rounded-full text-base font-medium shadow-lg hover:bg-orange-700 transition"
             >
               <Bot size={20} />

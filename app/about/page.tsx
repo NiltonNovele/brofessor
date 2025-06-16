@@ -174,10 +174,19 @@ const AboutPage = () => {
                 <Bot /> For Learners
               </h3>
               <ul className="list-disc ml-6 text-gray-700 space-y-2">
-                <li>Create your own AI study buddy</li>
-                <li>Talk to it like a friend, learn like a boss</li>
-                <li>Supports any topic, any style</li>
-                <li>Track what you have learned over time</li>
+                <li>
+                  You can simply go to the companions page and launch a session
+                  with one of the existing companions if they align with what
+                  you want to learn.
+                </li>
+                <li>
+                  If you would like to create a new one, on the home page select
+                  build companion and do as you please
+                </li>
+                <li>Talk to it like a friend</li>
+                <li>
+                  Ask as many questions Needed for you to grasp the concept
+                </li>
               </ul>
             </div>
             <div className="space-y-4">
@@ -185,10 +194,10 @@ const AboutPage = () => {
                 <Lightbulb /> For Educators
               </h3>
               <ul className="list-disc ml-6 text-gray-700 space-y-2">
-                <li>Instantly create your own AI study buddy</li>
                 <li>
-                  Chat like it is your friend — learn like it is your coach
+                  Instantly create your own AI study buddy to help your students
                 </li>
+                <li>A friend like AI teacher</li>
                 <li>Ask anything, anytime — any topic, any style</li>
                 <li>Track your progress and stay on top of your goals</li>
               </ul>
