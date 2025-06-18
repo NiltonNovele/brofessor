@@ -109,15 +109,17 @@ const AboutPage = () => {
         >
           <Users className="w-12 h-12 text-orange-500 mx-auto" />
           <h2 className="text-4xl font-bold text-orange-600">
-            The Brain Behind BroFessor
+            The Brains Behind BroFessor
           </h2>
           <p className="text-gray-700 max-w-2xl mx-auto mt-4">
-            It's Literally just me.
+            It's Literally just us.
           </p>
+           
 
-          <div className="flex flex-col gap-16 pt-12 max-w-4xl mx-auto">
+            <div className="flex flex-col gap-16 pt-12 max-w-4xl mx-auto">
             {/* Founder 1 */}
             <div className="flex items-center gap-6 text-left">
+              {/* Image */}
               <div className="w-32 h-32 rounded-full overflow-hidden shadow-lg flex-shrink-0">
                 <Image
                   src="/nilton.jpeg"
@@ -127,29 +129,69 @@ const AboutPage = () => {
                   className="object-cover w-full h-full"
                 />
               </div>
+
+              {/* Text + quote + LinkedIn */}
               <div>
                 <h4 className="text-lg font-bold">Nilton Novele</h4>
-                <p className="text-sm text-gray-600 mb-2">
-                  Founder & Developer
-                </p>
+                <p className="text-sm text-gray-600 mb-2">Co-Founder & Developer</p>
                 <p className="text-gray-700 mb-4 max-w-md">
-                  As a procrastinator, I was looking for quickest and most
+                   As a procrastinator, I was looking for quickest and most
                   effective way to study for an exam. I didn't find on the
                   internet so I decided to create one, and then I decided to not
                   be a gatekeeper, BroFessor is here now.
                 </p>
                 {/* <blockquote className="bg-orange-50 border-l-4 border-orange-400 p-4 italic text-orange-700 shadow-sm rounded mb-4 max-w-md">
-                  “I will always choose a lazy person to do a difficult job
-                  because a lazy person will find an easy way to do it” - Steve
-                  Jobs
+                  “Our vision is to create seamless tech that empowers service
+                  providers to focus on what matters most — delivering
+                  exceptional value to their clients.”
                 </blockquote> */}
                 <a
-                  href="https://www.linkedin.com/in/nilton-novele-82211821b/"
+                  href="https://niltonnovele.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block px-4 py-2 bg-orange-500 text-white rounded hover:bg-orange-600 transition"
+                  aria-label="Nilton Novele"
                 >
-                  LinkedIn
+                  Find Me
+                </a>
+              </div>
+            </div>
+
+            {/* Founder 2 */}
+            <div className="flex items-center gap-6 text-left">
+              {/* Image */}
+              <div className="w-32 h-32 rounded-full overflow-hidden shadow-lg flex-shrink-0">
+                <Image
+                  src="/jumpex.jpg"
+                  alt="Henzel Tibana"
+                  width={128}
+                  height={128}
+                  className="object-cover w-full h-full"
+                />
+              </div>
+
+              {/* Text + quote + LinkedIn */}
+              <div>
+                <h4 className="text-lg font-bold">Henzel Tibana</h4>
+                <p className="text-sm text-gray-600 mb-2">Co-Founder & Lead</p>
+                <p className="text-gray-700 mb-4 max-w-md">
+                  Nilton always has some wild ideas, but this one actually made sense.
+                  He told me about creating an AI that feels like a friend you can study with — and I was in. I decided to help him build it, no matter how long it took or how many weekends we had to sacrifice.
+                   Now BroFessor is here, and we’re proud of what it’s becoming.
+                </p>
+                {/* <blockquote className="bg-orange-50 border-l-4 border-orange-400 p-4 italic text-orange-700 shadow-sm rounded mb-4 max-w-md">
+                  “We built this app with a mission to simplify operations for
+                  African service providers, helping them grow sustainably in a
+                  competitive market.”
+                </blockquote> */}
+                <a
+                  href="https://www.linkedin.com/in/henzel-tibana-a07068211/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block px-4 py-2 bg-orange-500 text-white rounded hover:bg-orange-600 transition"
+                  aria-label="Henzel Tibana"
+                >
+                  Find Me
                 </a>
               </div>
             </div>

@@ -94,8 +94,8 @@ export default function Footer() {
             </p>
             <p>
               Website:{" "}
-              <a href="https://niltonnovele.com" className="hover:text-red-500">
-                NiltonNovele.com
+              <a href="https://www.synctechx.com" className="hover:text-red-500">
+                SyncTechX
               </a>
             </p>
           </div>
@@ -141,7 +141,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="hover:text-red-500 underline"
             >
-              Nilton Novele
+              Nilton Novele & Henzel Tibana
             </a>
             .
           </p>
