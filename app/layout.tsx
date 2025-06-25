@@ -5,6 +5,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
+
 const bricolage = Bricolage_Grotesque({
   variable: "--font-bricolage",
   subsets: ["latin"],
@@ -14,6 +15,7 @@ export const metadata: Metadata = {
   title: "BroFessor",
   description: "Your AI study Bro",
 };
+
 
 export default function RootLayout({
   children,

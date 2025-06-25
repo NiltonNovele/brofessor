@@ -14,8 +14,8 @@ const nextConfig: NextConfig = {
 };
 
 const sentryOptions = {
-  org: "synctechx", // OR "jsmpro"
-  project: "converso", // OR "jsm_converso"
+  org: "synctechx", 
+  project: "converso", 
   silent: !process.env.CI,
   widenClientFileUpload: true,
   tunnelRoute: "/monitoring",

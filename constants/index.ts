@@ -30,12 +30,35 @@ export const subjects = [
 ];
 
 export const subjectsColors = {
-  science: "#E5D0FF",
-  maths: "#FFDA6E",
-  language: "#BDE7FF",
-  coding: "#FFC8E4",
-  history: "#FFECC8",
-  economics: "#C8FFDF",
+  maths: "#FFDA6E",             // soft yellow (keep your original)
+  language: "#BDE7FF",          // light blue (keep your original)
+  science: "#E5D0FF",           // soft purple (keep your original)
+  coding: "#FFC8E4",            // pink pastel (keep your original)
+  history: "#FFECC8",           // warm cream (keep your original)
+  economics: "#C8FFDF",         // mint green (keep your original)
+
+  physics: "#9BCDD2",           // dusty teal blue
+  chemistry: "#D9ABFF",         // lavender purple
+  biology: "#A1E3D8",           // aqua green
+  geography: "#F8D49D",         // soft orange
+  literature: "#FFD6C2",        // peach pastel
+  philosophy: "#C6E5FF",        // pale sky blue
+  psychology: "#FFB3C6",        // soft rose pink
+  sociology: "#B8FFD8",         // pale mint
+  business: "#FFD97D",          // golden yellow
+  law: "#C9B8FF",               // muted violet
+  politics: "#FFBC99",          // warm coral
+  statistics: "#A3D2CA",        // seafoam green
+  accounting: "#FFC3A1",        // salmon pastel
+  engineering: "#90CAF9",       // clear blue
+  medicine: "#98FF98",          // mint green
+  "environmental studies": "#B1E693", // fresh green
+  "computer science": "#FFB6B9", // pastel red-pink
+  "art & design": "#FFDAC1",    // pale apricot
+  "music theory": "#D0F4DE",    // mint pastel
+  "religious studies": "#B5B8FF", // light indigo
+  ethics: "#FFABAB",            // soft coral
+  entrepreneurship: "#FFE156",  // bright yellow
 };
 
 export const voices = {

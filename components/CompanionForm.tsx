@@ -1,5 +1,6 @@
 "use client"
 
+import { useEffect, useState } from "react"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
@@ -59,6 +60,39 @@ const CompanionForm = () => {
         }
     }
 
+    type Note = {
+  _id: string
+  title: string
+  subject: string
+  fileUrl: string
+}
+
+const [notes, setNotes] = useState<Note[]>([])
+const [searchTerm, setSearchTerm] = useState('')
+const [attachedNotes, setAttachedNotes] = useState<string[]>([])
+
+const filteredNotes = notes.filter(
+  (note) =>
+    note.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    note.subject.toLowerCase().includes(searchTerm.toLowerCase())
+)
+
+const handleToggleNote = (id: string) => {
+  setAttachedNotes((prev) =>
+    prev.includes(id) ? prev.filter((nid) => nid !== id) : [...prev, id]
+  )
+}
+
+// Fetch all available notes once
+useEffect(() => {
+  const fetchNotes = async () => {
+    const res = await fetch("/api/library")
+    const data = await res.json()
+    setNotes(data)
+  }
+  fetchNotes()
+}, [])
+
     return (
         <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
@@ -112,22 +146,64 @@ const CompanionForm = () => {
                     )}
                 />
                 <FormField
-                    control={form.control}
-                    name="topic"
-                    render={({ field }) => (
-                        <FormItem>
-                            <FormLabel>What should the companion help with?</FormLabel>
-                            <FormControl>
-                                <Textarea
-                                    placeholder="Ex. Derivates & Integrals"
-                                    {...field}
-                                    className="input"
-                                />
-                            </FormControl>
-                            <FormMessage />
-                        </FormItem>
-                    )}
-                />
+  control={form.control}
+  name="topic"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>What should the companion help with?</FormLabel>
+      <FormControl>
+        <Textarea
+          placeholder="Ex. Derivatives & Integrals"
+          {...field}
+          className="input"
+        />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+{/* Attach Notes Section */}
+<div className="mt-6 space-y-3">
+  <h3 className="font-medium text-gray-800">📎 Attach Notes from Library</h3>
+
+  {/* Search Input */}
+  <input
+    type="text"
+    placeholder="Search notes by title or subject..."
+    className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400 text-sm"
+    value={searchTerm}
+    onChange={(e) => setSearchTerm(e.target.value)}
+  />
+
+  {/* Notes List */}
+  <div className="max-h-48 overflow-y-auto border rounded-md p-2 bg-white">
+    {filteredNotes.length > 0 ? (
+      filteredNotes.map((note) => (
+        <label key={note._id} className="flex items-center gap-2 mb-1">
+          <input
+            type="checkbox"
+            checked={attachedNotes.includes(note._id)}
+            onChange={() => handleToggleNote(note._id)}
+          />
+          <span className="text-sm">
+            <strong>{note.title}</strong> <span className="text-gray-500">({note.subject})</span>
+          </span>
+        </label>
+      ))
+    ) : (
+      <p className="text-sm text-gray-400 italic">No matching notes found.</p>
+    )}
+  </div>
+
+  {/* Preview Selected */}
+  {attachedNotes.length > 0 && (
+    <div className="text-sm text-gray-700">
+      Attached: {attachedNotes.length} note{attachedNotes.length > 1 ? 's' : ''}
+    </div>
+  )}
+</div>
+
 
                 
 

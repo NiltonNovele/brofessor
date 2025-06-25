@@ -248,16 +248,16 @@ const AboutPage = () => {
 
           {/* Responsive YouTube Embed */}
           <div className="mt-12 aspect-w-16 aspect-h-9 max-w-4xl mx-auto">
-            <iframe
-              src="https://www.youtube.com/embed/6LPQu21pQlQ?si=sXKpLdiFJTjWDHar"
-              title="How BroFessor Works Video"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="w-full h-120 rounded-lg shadow-lg"
-            />
+            <video
+              src="/video.mp4"
+              controls
+              preload="metadata"
+              className="w-full h-full object-cover"
+            >
+              Sorry, your browser does not support the video tag.
+            </video>
             <p className="text-gray-700 mb-4 max-w-md pt-8 mx-auto text-center">
-              I'm still trying to make a tutorial video (harder than what I
-              expected). But in the meantime, you can enjoy this waiting video.
+              Checkout the demo video.
             </p>
           </div>
         </motion.div>

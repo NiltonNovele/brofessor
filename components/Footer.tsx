@@ -109,7 +109,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-zinc-500">
         <div className="flex gap-4">
           <a
-            href="https://www.instagram.com/niltonnovele/"
+            href="https://www.instagram.com/brofessor.app/"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-red-500 transition"
